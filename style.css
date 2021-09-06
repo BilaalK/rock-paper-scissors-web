@@ -1,0 +1,110 @@
+html {
+    height: 100%;
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+}
+
+section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    position: relative;
+    top: 10px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 2.5em;;
+}
+
+#flex-container {
+    display: flex;
+    width: 90vmin;
+    font-size: 1.5em;
+}
+
+.flex-child {
+    background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 47%, #46aef7 100%);
+    flex: 1;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    height: 40vmin;
+    justify-content: center;
+}  
+
+.flex-child:first-child {
+    margin-right: 50px;
+} 
+
+.left-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+    rgb(85, 91, 255) 0px 0px 0px 3px, 
+    rgb(31, 193, 27) 0px 0px 0px 6px, 
+    rgb(255, 217, 19) 0px 0px 0px 9px, 
+    rgb(255, 156, 85) 0px 0px 0px 12px, 
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+.right-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+    rgb(85, 91, 255) 0px 0px 0px 3px, 
+    rgb(31, 193, 27) 0px 0px 0px 6px, 
+    rgb(255, 217, 19) 0px 0px 0px 9px, 
+    rgb(255, 156, 85) 0px 0px 0px 12px, 
+    rgb(255, 85, 85) 0px 0px 0px 15px;
+}
+
+#button-container {
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+#button-container button{
+    width: 150px;
+    height: 75px;
+    border-radius: 30%;
+    font-size: 1.7em;
+    font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+}
+
+#button-container button:hover{
+    transform: scale(1.2);
+    box-shadow: 
+    rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, 
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.btn {
+    background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    margin: 10px;
+    box-shadow: 
+    rgb(85, 91, 255) 0px 0px 0px 3px, 
+    rgb(31, 193, 27) 0px 0px 0px 6px;
+}
+
+p {
+    margin-top: 4vh;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+#btnReset {
+    background-color: rgb(197, 26, 26);
+    color: white;
+    box-shadow: 
+    rgb(255, 85, 184) 0px 0px 0px 3px, 
+    rgb(255, 208, 0) 0px 0px 0px 6px;
+}

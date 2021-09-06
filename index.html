@@ -6,12 +6,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>The Ol' Classic!</title>
 
-        <link rel="stylesheet" href="css/rock-paper-scissors.css">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <script src="javascript/rock-paper-scissors.js"></script>
-
+        <script src="script.js" defer></script>
         
+        <div id="main">
+            <h1>Rock-Paper-Scissors</h1>
+
+            <section>
+                <div id="flex-container">
+                    <div class="flex-child left-div">
+                        <h2 id="userSelection">CHOOSE</h2>
+                    </div>
+                    
+                    <div class="flex-child right-div">
+                        <h2 id="text-cycle"></h2> <br>
+                        <br>
+                        <h2 id="new-cycle"></h2>
+                    </div>
+                </div>
+            </section>
+
+            <div id='button-container'>
+                <button id="btn1" class="btn">Rock</button>
+                <button id="btn2" class="btn">Paper</button>
+                <button id="btn3" class="btn">Scissors</button>
+                <br><br>
+                <button id="btnReset">Reset</button>
+            </div>
+
+            <p id="result"></p>
+            <p id='score'></p>
+        </div>
+
     </body>
 </html>

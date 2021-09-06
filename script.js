@@ -2,7 +2,25 @@ let playerScore = 0;
 let computerScore = 0;
 let tieGame = 0;
 
+const computerSelection = ['rock', 'paper', 'scissors'];
+const btn1 = document.getElementById('btn1');
+const btn2 = document.getElementById('btn2');
+const btn3 = document.getElementById('btn3');
+const score = document.getElementById('score');
+const user = document.getElementById('userSelection');
+const result = document.getElementById('result');
+const btnReset = document.querySelector('#btnReset')
+const cycle = document.querySelector("#text-cycle");
+let i = 0;
+
+function textCycle() {
+    cycle.textContent = computerSelection[i];
+    i = ++i % computerSelection.length;
+}
+
 function computerPlay() {
+    
+    
     let rockPaperScissors = Math.floor(Math.random() * 5);
 
     if (rockPaperScissors === 0 || rockPaperScissors === 3){
@@ -14,7 +32,6 @@ function computerPlay() {
     } 
 };
 
-
 function play(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'Scissors') {
         playerScore++;
@@ -25,7 +42,7 @@ function play(playerSelection, computerSelection) {
     } else if (playerSelection === 'scissors' && computerSelection === 'Scissors') {
         tieGame++;
         return playerTie = 'Tie! Scissors meet Scissors.';
-    } 
+    }
     
     // ----------------------------------------------------------------------------
 
@@ -58,21 +75,29 @@ function play(playerSelection, computerSelection) {
     }
 };
 
-function game() {
+setInterval(textCycle, 70);
 
-    for (;;) {
-        const playerSelection = prompt('Enter your selection (Rock, Paper, Scissors): ').toLowerCase();
-        const computerSelection = computerPlay(); 
-        console.log(play(playerSelection, computerSelection) + ` Score: ${playerScore} - ${computerScore}`);
+btn1.addEventListener("click", function () {
+    user.textContent = btn1.textContent;
+    result.textContent = play('rock', computerPlay());
+    score.textContent = `Score: ${playerScore} - ${computerScore}`;
+    return;
+});
 
-        if (playerScore === 5) {
-            console.log(`You win. Final score: ${playerScore} - ${computerScore}`)
-            break;
-        } else if (computerScore === 5) {
-            console.log(`You lose. Final score: ${playerScore} - ${computerScore}`)
-            break;
-        }
-    };
-};
+btn2.addEventListener("click", function () {
+    user.textContent = btn2.textContent;
+    result.textContent = play('paper', computerPlay());
+    score.textContent = `Score: ${playerScore} - ${computerScore}`;
+    return;
+});
 
-game();
+btn3.addEventListener("click", function () {
+    user.textContent = btn3.textContent;
+    result.textContent = play('scissors', computerPlay());
+    score.textContent = `Score: ${playerScore} - ${computerScore}`;
+    return;
+});
+
+btnReset.addEventListener('click', function() {
+    location.reload(true);
+});
